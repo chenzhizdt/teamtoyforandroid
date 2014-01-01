@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="glacier">#74A6BD</color>
+    <color name="gothic">#7195A3</color>
+    <color name="botticelli">#D4E7ED</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+</resources>

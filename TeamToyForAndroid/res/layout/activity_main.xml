@@ -1,0 +1,85 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/ll_sliding_menus"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@android:color/background_light"
+        android:orientation="vertical"
+        android:layout_marginRight="50dp" >
+        <TextView 
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textColor="@color/white"
+            android:text="@string/settings"
+            android:textSize="20sp"
+            android:padding="10dp"
+            android:background="@android:color/darker_gray"/>
+        <ListView
+            android:id="@+id/lv_sliding_menu"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:background="@android:color/darker_gray"
+            android:divider="@color/transparent"
+            android:dividerHeight="2dp"/>
+    </LinearLayout>
+
+    <org.instorm.teamtoyforandroid.TouchLinearLayout
+        android:id="@+id/ll_main_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <org.instorm.teamtoyforandroid.TouchViewPager
+            android:id="@+id/vp_fragment_container"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:flipInterval="30"
+            android:persistentDrawingCache="animation" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_todo"
+                style="@style/menu_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/todo" />
+
+            <Button
+                android:id="@+id/btn_team_news"
+                style="@style/menu_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/team_news" />
+
+            <Button
+                android:id="@+id/btn_notifications"
+                style="@style/menu_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/notification" />
+
+            <Button
+                android:id="@+id/btn_team_members"
+                style="@style/menu_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/team_members" />
+        </LinearLayout>
+    </org.instorm.teamtoyforandroid.TouchLinearLayout>
+
+</RelativeLayout>
